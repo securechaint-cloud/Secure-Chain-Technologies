@@ -5,8 +5,13 @@
     <title>SecureChain Technologies – Digitaler Produktpass für sichere & nachhaltige Lieferketten</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="SecureChain Technologies ist eine blockchain-basierte Plattform für digitale Produktpässe, die Cybersecurity, CRA-Compliance und Nachhaltigkeit über den gesamten Lebenszyklus abbildet.">
+
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -15,7 +20,10 @@
             background-color: #f3f4f6;
         }
 
-        a { text-decoration: none; color: inherit; }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
         header {
             position: sticky;
@@ -29,43 +37,33 @@
         .nav-container {
             max-width: 1120px;
             margin: 0 auto;
-            padding: 0.95rem 1.25rem; /* etwas höher für großes Logo */
+            padding: 0.9rem 1.25rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 1rem;
         }
 
-        /* ✅ IKEA-Style: großes sichtbares Brand-Logo */
+        /* ✅ GROßES BREITES LOGO WIE IKEA */
         .brand {
             display: flex;
             align-items: center;
-            gap: 0.9rem;
+            flex: 1;
             min-width: 340px;
         }
 
         .brand img {
-            width: 92px;           /* 🔥 groß sichtbar */
-            height: 92px;
-            border-radius: 1rem;
+            height: 78px;          /* 🔥 groß sichtbar */
+            width: auto;
+            max-width: 520px;      /* 🔥 geht weit in die Breite */
             object-fit: contain;
+            display: block;
+
+            /* ✅ Transparent bleibt transparent */
             background: transparent;
-            box-shadow: 0 16px 34px rgba(15, 23, 42, 0.18);
-        }
 
-        .brand-name {
-            font-weight: 900;
-            letter-spacing: 0.01em;
-            font-size: 1.18rem;
-            line-height: 1.05;
-        }
-
-        .brand-sub {
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 0.16em;
-            color: #6b7280;
-            margin-top: 0.2rem;
+            /* ✅ Premium Look */
+            filter: drop-shadow(0 12px 22px rgba(15, 23, 42, 0.18));
         }
 
         nav ul {
@@ -75,8 +73,13 @@
             font-size: 0.95rem;
         }
 
-        nav a { opacity: 0.8; }
-        nav a:hover { opacity: 1; }
+        nav a {
+            opacity: 0.8;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
 
         .btn-primary {
             padding: 0.5rem 1rem;
@@ -90,7 +93,9 @@
             white-space: nowrap;
         }
 
-        .btn-primary:hover { background: #030712; }
+        .btn-primary:hover {
+            background: #030712;
+        }
 
         main {
             max-width: 1120px;
@@ -123,7 +128,9 @@
             margin-bottom: 1rem;
         }
 
-        .hero h1 span { color: #111827; }
+        .hero h1 span {
+            color: #111827;
+        }
 
         .hero-subtitle {
             font-size: 1rem;
@@ -162,9 +169,14 @@
             cursor: pointer;
         }
 
-        .btn-secondary:hover { background: #e5e7eb; }
+        .btn-secondary:hover {
+            background: #e5e7eb;
+        }
 
-        .hero-note { font-size: 0.8rem; color: #6b7280; }
+        .hero-note {
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
 
         .hero-card {
             background: #111827;
@@ -173,20 +185,17 @@
             padding: 1.5rem;
             box-shadow: 0 18px 45px rgba(15, 23, 42, 0.35);
             font-size: 0.9rem;
-            position: relative;
-            overflow: hidden;
         }
 
-        .hero-card::before {
-            content: "";
-            position: absolute;
-            inset: -20%;
-            background: radial-gradient(circle at 30% 30%, rgba(56, 189, 248, 0.22), transparent 60%);
-            pointer-events: none;
+        .hero-card h2 {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
         }
 
-        .hero-card h2 { font-size: 1rem; margin-bottom: 0.75rem; position: relative; }
-        .hero-card-list { list-style: none; margin-top: 0.75rem; position: relative; }
+        .hero-card-list {
+            list-style: none;
+            margin-top: 0.75rem;
+        }
 
         .hero-card-list li {
             display: flex;
@@ -195,7 +204,10 @@
             margin-bottom: 0.4rem;
         }
 
-        .hero-card-list span { font-size: 0.85rem; opacity: 0.9; }
+        .hero-card-list span {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
 
         .hero-tag {
             display: inline-block;
@@ -204,11 +216,12 @@
             letter-spacing: 0.16em;
             opacity: 0.7;
             margin-bottom: 0.5rem;
-            position: relative;
         }
 
         /* Sections */
-        section { margin-bottom: 3rem; }
+        section {
+            margin-bottom: 3rem;
+        }
 
         section h2 {
             font-size: 1.5rem;
@@ -237,9 +250,15 @@
             font-size: 0.9rem;
         }
 
-        .card h3 { font-size: 1rem; margin-bottom: 0.4rem; }
+        .card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+        }
 
-        .card p { font-size: 0.9rem; color: #4b5563; }
+        .card p {
+            font-size: 0.9rem;
+            color: #4b5563;
+        }
 
         .tagline {
             font-size: 0.8rem;
@@ -281,8 +300,13 @@
             gap: 2rem;
         }
 
-        ul { padding-left: 1.1rem; }
-        ul li { margin-bottom: 0.3rem; }
+        ul {
+            padding-left: 1.1rem;
+        }
+
+        ul li {
+            margin-bottom: 0.3rem;
+        }
 
         /* Contact */
         .contact-box {
@@ -306,8 +330,14 @@
             font-size: 0.9rem;
         }
 
-        .contact-box textarea { min-height: 90px; resize: vertical; }
-        .contact-box button { width: 100%; }
+        .contact-box textarea {
+            min-height: 90px;
+            resize: vertical;
+        }
+
+        .contact-box button {
+            width: 100%;
+        }
 
         .contact-note {
             font-size: 0.8rem;
@@ -323,7 +353,7 @@
             text-align: center;
         }
 
-        /* Responsive */
+        /* ✅ Responsive */
         @media (max-width: 900px) {
             .hero { grid-template-columns: 1fr; }
             .hero-card { order: -1; }
@@ -331,28 +361,24 @@
             .steps { grid-template-columns: 1fr; }
             .two-col { grid-template-columns: 1fr; }
             .contact-box { grid-template-columns: 1fr; }
-
             nav ul { display: none; }
 
-            .brand { min-width: auto; }
-            .brand img { width: 68px; height: 68px; }
-            .brand-name { font-size: 1.06rem; }
+            .brand img {
+                height: 62px;
+                max-width: 320px;
+            }
         }
     </style>
 </head>
+
 <body>
 
 <header>
     <div class="nav-container">
 
-        <!-- ✅ Großer Brand-Block wie IKEA -->
+        <!-- ✅ BIG LOGO -->
         <a href="#start" class="brand">
-            <!-- ❗️Hier den Dateinamen/Pfad deines bearbeiteten Logos eintragen -->
             <img src="securechain-logo.png" alt="SecureChain Technologies Logo">
-            <div>
-                <div class="brand-name">SecureChain Technologies</div>
-                <div class="brand-sub">Digital Product Passport</div>
-            </div>
         </a>
 
         <nav>
@@ -400,7 +426,7 @@
 
         <aside class="hero-card">
             <div class="hero-tag">Kurz erklärt</div>
-            <h2>Was macht SecureChain besonders?</h2>
+            <h2>Was macht SecureChain Technologies besonders?</h2>
             <ul class="hero-card-list">
                 <li><strong>✔</strong><span>Digitale Produktpässe mit vollständiger Historie – von der Entwicklung über Updates bis zum Recycling.</span></li>
                 <li><strong>✔</strong><span>Fälschungssichere Nachweise dank Consortium-Blockchain für alle relevanten Stakeholder.</span></li>
@@ -413,7 +439,7 @@
     <!-- USP -->
     <section id="usp">
         <div class="tagline">USP</div>
-        <h2>Ihr Kern-Mehrwert mit SecureChain</h2>
+        <h2>Ihr Kern-Mehrwert mit SecureChain Technologies</h2>
         <p class="section-intro">
             Der digitale Produktpass ist nicht nur ein weiteres Dokument –
             er wird zur vertrauenswürdigen Datendrehscheibe zwischen Entwicklung,
@@ -433,7 +459,7 @@
                 <h3>2. Automatisierte CRA- & Security-Checks</h3>
                 <p>
                     Auf Basis von SBOM und Schwachstellen-Informationen unterstützt
-                    SecureChain Sie bei der Erfüllung der CRA-Pflichten und
+                    SecureChain Technologies Sie bei der Erfüllung der CRA-Pflichten und
                     reduziert manuellen Compliance-Aufwand.
                 </p>
             </div>
@@ -452,7 +478,9 @@
     <section id="funktion">
         <div class="tagline">Funktionsweise</div>
         <h2>So funktioniert der digitale Produktpass in der Praxis</h2>
-        <p class="section-intro">Drei einfache Schritte vom Rohdateneingang bis zum nachweisbaren Produktpass.</p>
+        <p class="section-intro">
+            Drei einfache Schritte vom Rohdateneingang bis zum nachweisbaren Produktpass.
+        </p>
 
         <div class="steps">
             <div class="step">
@@ -463,87 +491,12 @@
             <div class="step">
                 <div class="step-number">2</div>
                 <strong>Validieren & verankern</strong>
-                <span>SecureChain prüft Format & Vollständigkeit, ergänzt Metadaten und verknüpft den Produktpass fälschungssicher mit der Blockchain.</span>
+                <span>SecureChain Technologies prüft Format & Vollständigkeit, ergänzt Metadaten und verknüpft den Produktpass fälschungssicher mit der Blockchain.</span>
             </div>
             <div class="step">
                 <div class="step-number">3</div>
                 <strong>Bereitstellen & nachweisen</strong>
                 <span>Stakeholder greifen über Portale oder QR-Code auf die jeweils passende Sicht zu – inklusive Audit-Trail und Compliance-Status.</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Vorteile -->
-    <section id="vorteile">
-        <div class="tagline">Vorteile</div>
-        <h2>Für wen lohnt sich SecureChain besonders?</h2>
-        <p class="section-intro">
-            Unterschiedliche Rollen, ein gemeinsames Ziel: Transparenz, Sicherheit
-            und Vertrauen entlang der gesamten Wertschöpfungskette.
-        </p>
-
-        <div class="grid-3">
-            <div class="card">
-                <h3>Produktmanagement & Entwicklung</h3>
-                <ul>
-                    <li>Schneller Überblick über Produkt- und Firmwarestände</li>
-                    <li>Nachvollziehbare Produkt-Historie für Audits</li>
-                    <li>Bessere Planung von Updates & Releases</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Cybersecurity & Compliance</h3>
-                <ul>
-                    <li>Unterstützung bei CRA-Nachweispflichten</li>
-                    <li>Transparenz über SBOM & Schwachstellen</li>
-                    <li>Reduzierter manueller Dokumentationsaufwand</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Nachhaltigkeit & Kunden</h3>
-                <ul>
-                    <li>CO₂- & Lifecycle-Daten pro Produkt</li>
-                    <li>Transparente Informationen für Kunden & Partner</li>
-                    <li>Mehr Vertrauen in vernetzte Produkte</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technologie -->
-    <section id="technik">
-        <div class="tagline">Technologie</div>
-        <h2>Was steckt technisch hinter SecureChain?</h2>
-
-        <div class="two-col">
-            <div>
-                <p class="section-intro">
-                    SecureChain setzt auf eine moderne, skalierbare Architektur,
-                    die sich in bestehende IT-Landschaften integrieren lässt.
-                </p>
-                <ul>
-                    <li><strong>Consortium-Blockchain</strong> für Integrität & Nachweisbarkeit</li>
-                    <li><strong>Off-Chain Datenspeicher</strong> für detaillierte Produktpass-Daten</li>
-                    <li><strong>APIs & Webportale</strong> für ERP, PLM, Lieferanten & Kunden</li>
-                    <li><strong>Rollenbasierte Zugriffe</strong> (z. B. intern, Lieferant, Auditor)</li>
-                    <li><strong>Optionale KI-Module</strong> für Datenqualität & Anomalieerkennung</li>
-                </ul>
-            </div>
-            <div>
-                <div class="card">
-                    <h3>Typische Komponenten</h3>
-                    <ul>
-                        <li>Backend-Services (z. B. in der Cloud oder On-Prem)</li>
-                        <li>Webportale für interne Nutzer, Lieferanten, Kunden</li>
-                        <li>QR-/Code-Integration für physischen Produktzugriff</li>
-                        <li>Event-getriebene Anbindung an bestehende Systeme</li>
-                    </ul>
-                    <p style="margin-top:0.75rem; font-size:0.85rem; color:#6b7280;">
-                        Architektur und Tech-Stack können an Ihre vorhandene
-                        Infrastruktur angepasst werden (z. B. bevorzugte Cloud,
-                        Blockchain-Framework, Programmiersprachen).
-                    </p>
-                </div>
             </div>
         </div>
     </section>
